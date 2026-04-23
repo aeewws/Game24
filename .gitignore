@@ -13,3 +13,16 @@
 .externalNativeBuild
 .cxx
 local.properties
+
+# OS / local files
+Thumbs.db
+.env
+.env.*
+*.log
+tmp/
+temp/
+.gradle/
+build/
+*/build/
+.idea/
+captures/
