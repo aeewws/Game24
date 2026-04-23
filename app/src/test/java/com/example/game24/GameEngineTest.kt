@@ -66,8 +66,8 @@ class GameEngineTest {
 
     @Test
     fun `evalExact fractional arithmetic`() {
-        // 8 ÷ (3 - 8 ÷ 3) = 8 ÷ (3 - 8/3) = 8 ÷ (1/3) = 24
-        val result = evalExact(listOf(8, 3, 8, 3), listOf(Op.DIV, Op.SUB, Op.DIV), ParenMode.BC)
+        // 8 × (3 ÷ 4) × 4 = 8 × 3 = 24
+        val result = evalExact(listOf(8, 3, 4, 4), listOf(Op.MUL, Op.DIV, Op.MUL), ParenMode.BC)
         assertNotNull(result)
         assertEquals(Frac(24, 1), result)
     }
